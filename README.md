@@ -2,9 +2,7 @@
 
 Um site simples para acompanhar o valor do Bitcoin em tempo real!
 
-<div>
-  <img src="/src/assets/images/preview.png" alt="preview">
-</div>
+![Meu GIF](./assets/images/preview.gif)
 
 ## Tecnologias:
 
