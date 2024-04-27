@@ -1,194 +1,208 @@
 :root {
-    --main-color: #181A20;
-    --second-color: #F7931A;
-    --third-color: #;
-    --text-color: #;
-    --secund-text-color: #;
+  --main-color: #181a20;
+  --second-color: #f7931a;
+  --third-color: #fff;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-html,body {
-    overflow-x: hidden;
+html,
+body {
+  overflow-x: hidden;
 }
-body{
-    background-color: var(--main-color);
+body {
+  background-color: var(--main-color);
 }
 header {
-    padding: 30px 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  padding: 30px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
-    width: 100vw;
+  width: 100vw;
 }
 
 section {
-    min-height: calc(100vh - 192px);
-    padding: 30px 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  min-height: calc(100vh - 192px);
+  padding: 30px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
-.sides{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+.sides {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
-.left{
-    margin: 0 30px;
+.left {
+  margin: 0 30px;
 }
-h1,
-h2 {
-    color: var(--second-color);
+h1,h4{
+  color: var(--second-color);
 }
-
 h1 {
-    font-size: 120px;
-    line-height: 55px;
+  font-size: 120px;
+  line-height: 55px;
 }
-
-h2 {
-    font-size: 80px;
+h4 {
+  letter-spacing: 1.1px;
 }
-p{
-    font-size: 20px;
+p {
+  font-size: 20px;
 }
 .moedas {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 15px;
-    padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  padding: 30px;
 }
-.moeda{
-    display: flex;
-    align-items: center;
-    gap: 15px;
+.moeda {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 15px;
+  min-width: 200px;
+}
+.moeda img {
+  display: flex;
+  justify-content: start;
 }
 
 .bitcoin {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, sans-serif;
-    color: #000;
-    font-size: 120px;
-    box-shadow: 0 4px 8px rgba(var(--main-color), var(--main-color), var(--main-color), 0.5);
-    perspective: 1000px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  color: var(--main-color);
+  font-size: 120px;
+  box-shadow: 0 4px 8px
+    rgba(var(--main-color), var(--main-color), var(--main-color), 0.5);
+  perspective: 1000px;
 }
 
 .coin {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: rotate 5s infinite linear;
-    transform-style: preserve-3d;
-    position: relative;
-    background-image: radial-gradient(circle, var(--second-color) 60%, var(--second-color) 100%);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: rotate 5s infinite linear;
+  transform-style: preserve-3d;
+  position: relative;
+  background-image: radial-gradient(
+    circle,
+    var(--second-color) 60%,
+    var(--second-color) 100%
+  );
 }
 
 .coin::before {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    right: 5px;
-    bottom: 5px;
-    border-radius: 50%;
-    background: var(--second-color);
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  background: var(--second-color);
 }
 
 .coin::after {
-    content: "₿";
-    position: absolute;
-    color: #000;
+  content: "₿";
+  position: absolute;
+  color: var(--third-color);
 }
 
 @keyframes rotate {
-    from {
-        transform: rotateY(0deg);
-    }
+  from {
+    transform: rotateY(0deg);
+  }
 
-    to {
-        transform: rotateY(360deg);
-    }
+  to {
+    transform: rotateY(360deg);
+  }
 }
 
-p, text{
-    color: var(--second-color);
+p,
+text {
+  color: var(--second-color);
 }
 
 footer {
-    padding: 30px 60px;
-    background-color: var(--main-color);
-    text-align: center;
+  padding: 30px 60px;
+  background-color: var(--main-color);
+  text-align: center;
 }
 
 @media (max-width: 978px) {
-    section,footer, header{
-        padding: 30px 45px;
-    }
-    .sides{
-        justify-content: center;
-        margin: 30px;
-    }
-    .left{
-        text-align: center;
-    }
-    .bitcoin {
-        width: 200px;
-        height: 200px;
-    }
-    h1{
-        font-size: 90px;
-        margin-bottom: 20px;
-
-    }
-    text{
-        font-size: 14px;
-    }
+  section,
+  footer,
+  header {
+    padding: 30px 45px;
+  }
+  .sides {
+    justify-content: center;
+    margin: 30px;
+  }
+  .left {
+    text-align: center;
+  }
+  .bitcoin {
+    width: 200px;
+    height: 200px;
+  }
+  h1 {
+    font-size: 90px;
+    margin-bottom: 20px;
+  }
+  text {
+    font-size: 14px;
+  }
 }
 @media (max-width: 550px) {
-    header{
-        padding: 20px;
-    }
-    .container{
-        min-height: calc(100vh - 172px);
-    }
-    h1{
-        font-size: 60px;
-        margin-bottom: 50px;
-    }
-    .bitcoin {
-        width: 180px;
-        height: 180px;
-    }
-    footer{
-        padding: 30px 20px;
-    }
-    text{
-        font-size: 12px;
-    }
+  header {
+    padding: 20px;
+  }
+  .container {
+    min-height: calc(100vh - 172px);
+  }
+  h1 {
+    font-size: 60px;
+    margin-bottom: 35px;
+  }
+  .bitcoin {
+    width: 180px;
+    height: 180px;
+  }
+  footer {
+    padding: 30px 20px;
+  }
+  text {
+    font-size: 12px;
+  }
 }
 @media (max-width: 380px) {
-    .bitcoin {
-        width: 150px;
-        height: 150px;
-    }
+  .bitcoin {
+    width: 150px;
+    height: 150px;
+  }
+  h4 {
+    text-align: center;
+    font-size: 12px;
+  }
 }
