@@ -1,7 +1,9 @@
 # Bitcoin Live
 
 Um site simples para acompanhar o valor do Bitcoin em tempo real!
-
+<div>
+  <img src="/src/assets/images/preview.png" alt="preview">
+</div>
 ## Tecnologias:
 
 - HTML
