@@ -30,12 +30,26 @@ async function fetchData(url) {
     }).format(data.BRL);
     document.querySelector(
       "h4"
-    ).innerText = `Última atualização ás ${date.getHours()}h${date.getMinutes()}min${date.getSeconds()}s`;
+    ).innerText = `Última atualização ás ${formatarData(
+      date.getHours(),
+      date.getMinutes(),
+      date.getSeconds()
+    )}`;
 
     return;
   } catch (error) {
     console.error("Erro ao buscar dados:", error);
   }
+}
+
+function formatarData(hora, minutos, segundos) {
+  const padraoZero = (valor) => String(valor).padStart(2, "0");
+
+  const horaFormatada = padraoZero(hora);
+  const minutosFormatados = padraoZero(minutos);
+  const segundosFormatados = padraoZero(segundos);
+
+  return `${horaFormatada}:${minutosFormatados}:${segundosFormatados}`;
 }
 
 fetchData(url);
